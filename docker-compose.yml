@@ -1,0 +1,12 @@
+services:
+  myapp:
+    build: .
+    network_mode: "host"
+    volumes:
+      - .:/app:delegated
+    working_dir: /app
+    # command: sleep inf
+    command: sh entrypoint.sh
+    # command: . ./entrypoint.sh
+    # entrypoint: ./entrypoint.sh
+    # tty: true
